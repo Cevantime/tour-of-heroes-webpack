@@ -30,7 +30,7 @@ var HeroService =
 				});
 			},
 			handleError: function (error) {
-				console.error('An error occurred', error); // for demo purposes only
+				console.error('An error occurred', error);
 				return Promise.reject(error.message || error);
 			},
 			update : function(hero) {

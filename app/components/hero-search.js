@@ -2,8 +2,6 @@ var HeroSearchService = require('../services/hero-search');
 var subject = require('rxjs/Subject');
 var observable = require('rxjs/Observable');
 
-var Hero = require('../structs/hero');
-
 var HeroSearchComponent = ng.core.Component({
 	selector: 'hero-search',
 	templateUrl: 'templates/hero-search.html',
