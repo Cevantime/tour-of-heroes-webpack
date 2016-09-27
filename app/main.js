@@ -1,4 +1,4 @@
-var AppModule = require('./module');
+var AppModule = require('module');
 
 document.addEventListener('DOMContentLoaded', function () {
 	ng.platformBrowserDynamic

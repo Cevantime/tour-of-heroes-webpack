@@ -34,7 +34,7 @@
 /******/ 	__webpack_require__.c = installedModules;
 
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "/";
+/******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(0);
@@ -62,7 +62,6 @@
 	var HeroDetailComponent = __webpack_require__(5);
 	var DashboardComponent = __webpack_require__(6);
 	var HeroSearchComponent = __webpack_require__(7);
-
 	var HeroService = __webpack_require__(4);
 
 	var routing = __webpack_require__(27);
@@ -335,6 +334,8 @@
 	var HeroSearchService = __webpack_require__(8);
 	var subject = __webpack_require__(9);
 	var observable = __webpack_require__(10);
+
+	var Hero = __webpack_require__(26);
 
 	var HeroSearchComponent = ng.core.Component({
 		selector: 'hero-search',
@@ -1389,7 +1390,19 @@
 	//# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
-/* 26 */,
+/* 26 */
+/***/ function(module, exports) {
+
+	var Hero = ng.core.Class({
+		constructor: function (param) {
+			this.id = param.id;
+			this.name = param.name;
+		}
+	});
+
+	module.exports = Hero;
+
+/***/ },
 /* 27 */
 /***/ function(module, exports, __webpack_require__) {
 

@@ -1,4 +1,4 @@
-var HeroService = require('../services/hero');
+var HeroService = require('services/hero');
 var HeroDetailComponent =
 		ng.core.Component({
 			selector: 'my-hero-detail',
