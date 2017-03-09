@@ -320,7 +320,6 @@
 		var those = this;
 		this.heroService.getHeroes()
 			.then(function (heroes) {
-				console.log(heroes);
 				those.heroes = heroes.slice(1, 5);
 			});
 	};
