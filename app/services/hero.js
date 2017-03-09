@@ -10,7 +10,7 @@ var HeroService =
 				return this.http.get(this.heroesUrl)
 						.toPromise()
 						.then(function (response) {
-							return response.json().data
+							return response.json().data;
 						})
 						.catch(this.handleError);
 
@@ -35,14 +35,13 @@ var HeroService =
 			},
 			update : function(hero) {
 				var url = this.heroesUrl;
-				console.log(encodeURIComponent(hero.name));
 				var data ='id='+hero.id+'&name='+encodeURIComponent(hero.name);
 				return this.http.post(url, data, {headers: this.headers})
 						.toPromise()
 						.then(function() {return hero;})
 						.catch(this.handleError);
 			},
-			
+
 			create : function(name) {
 				var data = 'name='+encodeURIComponent(name);
 				return this.http.post(this.heroesUrl, data, {headers : this.headers})
@@ -52,7 +51,7 @@ var HeroService =
 						})
 						.catch(this.handleError);
 			},
-			
+
 			del : function(id) {
 				var url = this.heroesUrl+'?del='+id;
 				return this.http.get(url, {headers: this.headers})
@@ -61,8 +60,8 @@ var HeroService =
 							return null;
 						})
 						.catch(this.handleError);
-			} 
-			
+			}
+
 		});
 
 module.exports = HeroService;
